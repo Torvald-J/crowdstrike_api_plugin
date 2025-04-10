@@ -1,0 +1,219 @@
+openapi: 3.0.0
+info:
+  title: Crowdstrike Falcon API
+  version: 1.0.0
+paths:
+  /oauth2/token:
+    post:
+      summary: Fetch OAuth2 token
+      operationId: fetch_token
+      responses:
+        '200':
+          description: Token fetched successfully
+  /devices/queries/devices/v1:
+    get:
+      summary: Query devices
+      operationId: queries_devices
+      responses:
+        '200':
+          description: Devices queried successfully
+  /devices/entities/devices/v1:
+    get:
+      summary: Get device entities
+      operationId: entities_devices
+      responses:
+        '200':
+          description: Device entities fetched successfully
+  /users/queries/user-uuids-by-email/v1:
+    get:
+      summary: Query user UUIDs by email
+      operationId: user_uuids
+      responses:
+        '200':
+          description: User UUIDs fetched successfully
+  /detects/entities/detects/v2:
+    get:
+      summary: Get detections
+      operationId: detections
+      responses:
+        '200':
+          description: Detections fetched successfully
+  /sensors/entities/datafeed/v2:
+    get:
+      summary: Discover data streams
+      operationId: discover_streams
+      responses:
+        '200':
+          description: Data streams discovered successfully
+  /indicators/entities/iocs/v1:
+    get:
+      summary: Get IOC entities
+      operationId: ioc_endpoint
+      responses:
+        '200':
+          description: IOC entities fetched successfully
+  /iocs/entities/indicators/v1:
+    patch:
+      summary: Update IOC
+      operationId: update_ioc
+      responses:
+        '200':
+          description: IOC updated successfully
+    delete:
+      summary: Delete IOC
+      operationId: delete_ioc
+      responses:
+        '200':
+          description: IOC deleted successfully
+  /alerts/queries/alerts/v2:
+    get:
+      summary: Get alerts
+      operationId: get_alerts
+      responses:
+        '200':
+          description: Alerts fetched successfully
+  /alerts/entities/alerts/v2:
+    get:
+      summary: Get alert details
+      operationId: get_alerts_details
+      responses:
+        '200':
+          description: Alert details fetched successfully
+  /iocs/queries/indicators/v1:
+    get:
+      summary: Get IOC ID
+      operationId: get_ioc_id
+      responses:
+        '200':
+          description: IOC ID fetched successfully
+  /detects/queries/detects/v1:
+    get:
+      summary: Get detections connector
+      operationId: detections_connector
+      responses:
+        '200':
+          description: Detections connector fetched successfully
+  /detects/entities/summaries/GET/v1:
+    get:
+      summary: Get detection details
+      operationId: detection_details
+      responses:
+        '200':
+          description: Detection details fetched successfully
+  /indicators/queries/devices/v1:
+    get:
+      summary: Query IOC devices
+      operationId: ioc_queries
+      responses:
+        '200':
+          description: IOC devices queried successfully
+  /devices/entities/devices-actions/v2:
+    post:
+      summary: Perform device actions
+      operationId: devices_actions
+      responses:
+        '200':
+          description: Device actions performed successfully
+  /indicators/queries/iocs/v1:
+    get:
+      summary: List IOCs
+      operationId: ioc_listing
+      responses:
+        '200':
+          description: IOCs listed successfully
+  /indicators/queries/processes/v1:
+    get:
+      summary: Query processes
+      operationId: queries_processes
+      responses:
+        '200':
+          description: Processes queried successfully
+  /processes/entities/processes/v1:
+    get:
+      summary: Get process entities
+      operationId: entities_processes
+      responses:
+        '200':
+          description: Process entities fetched successfully
+  /spotlight/queries/vulnerabilities/v1:
+    get:
+      summary: Query vulnerabilities
+      operationId: vulnerability_ids
+      responses:
+        '200':
+          description: Vulnerabilities queried successfully
+  /spotlight/entities/vulnerabilities/v2:
+    get:
+      summary: Get vulnerability details
+      operationId: vulnerability_details
+      responses:
+        '200':
+          description: Vulnerability details fetched successfully
+  /spotlight/entities/remediations/v2:
+    get:
+      summary: Get remediation details
+      operationId: remediation_details
+      responses:
+        '200':
+          description: Remediation details fetched successfully
+  /real-time-response/entities/sessions/v1:
+    post:
+      summary: Create session
+      operationId: create_session
+      responses:
+        '200':
+          description: Session created successfully
+  /real-time-response/combined/batch-init-session/v1:
+    post:
+      summary: Start session
+      operationId: start_session
+      responses:
+        '200':
+          description: Session started successfully
+  /real-time-response/entities/active-responder-command/v1:
+    post:
+      summary: Execute responder command
+      operationId: responder_command
+      responses:
+        '200':
+          description: Responder command executed successfully
+  /real-time-response/combined/batch-get-command/v1:
+    post:
+      summary: Pull file from host
+      operationId: pull_file_from_host
+      responses:
+        '200':
+          description: File pulled successfully
+    get:
+      summary: Retrieve get command status
+      operationId: retrieve_get_command_status
+      responses:
+        '200':
+          description: Get command status retrieved successfully
+  /real-time-response/entities/extracted-file-contents/v1:
+    get:
+      summary: Get file content
+      operationId: file_content
+      responses:
+        '200':
+          description: File content fetched successfully
+  /iocs/entities/indicators/v1:
+    get:
+      summary: Get IOCs
+      operationId: get_iocs
+      responses:
+        '200':
+          description: IOCs fetched successfully
+    post:
+      summary: Upload IOC
+      operationId: upload_ioc
+      responses:
+        '200':
+          description: IOC uploaded successfully
+  /devices/combined/host-groups/v1:
+    get:
+      summary: Get host groups
+      operationId: get_host_groups
+      responses:
+        '200':
+          description: Host groups fetched successfully
