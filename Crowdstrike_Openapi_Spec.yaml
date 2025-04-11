@@ -53,6 +53,18 @@ paths:
         '200':
           description: IOC entities fetched successfully
   /iocs/entities/indicators/v1:
+    get:
+      summary: Get IOCs
+      operationId: get_iocs
+      responses:
+        '200':
+          description: IOCs fetched successfully
+    post:
+      summary: Upload IOC
+      operationId: upload_ioc
+      responses:
+        '200':
+          description: IOC uploaded successfully
     patch:
       summary: Update IOC
       operationId: update_ioc
@@ -197,19 +209,6 @@ paths:
       responses:
         '200':
           description: File content fetched successfully
-  /iocs/entities/indicators/v1:
-    get:
-      summary: Get IOCs
-      operationId: get_iocs
-      responses:
-        '200':
-          description: IOCs fetched successfully
-    post:
-      summary: Upload IOC
-      operationId: upload_ioc
-      responses:
-        '200':
-          description: IOC uploaded successfully
   /devices/combined/host-groups/v1:
     get:
       summary: Get host groups
